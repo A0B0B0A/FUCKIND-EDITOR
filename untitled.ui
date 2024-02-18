@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>697</width>
+    <height>602</height>
+   </rect>
+  </property>
   <property name="windowTitle">
    <string>EASY FACKING EDITOR BITCH</string>
   </property>
@@ -10,7 +18,7 @@
 color:white;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="name_1">
+   <widget class="QLineEdit" name="list_notes">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -106,7 +114,7 @@ border-radius: 5px;</string>
      <string>SAVE</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="name_2">
+   <widget class="QLineEdit" name="list_tegs">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -183,7 +191,7 @@ border-radius: 5px;</string>
      <string>DELETE</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="notes_2">
+   <widget class="QListWidget" name="tegs">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -202,7 +210,7 @@ border-radius: 5px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>696</width>
+     <width>697</width>
      <height>21</height>
     </rect>
    </property>
