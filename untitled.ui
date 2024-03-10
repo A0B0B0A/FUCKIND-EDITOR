@@ -6,190 +6,202 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>771</width>
-    <height>567</height>
+    <width>697</width>
+    <height>602</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>EASY SUPER PAVER TROLEIBES</string>
+   <string>EASY FACKING EDITOR BITCH</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:rgb(0, 0, 0) ;
-color: rgb(255, 255, 255);
-</string>
+   <string notr="true">background:black;
+color:white;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="title">
+   <widget class="QLineEdit" name="list_notes">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>410</x>
       <y>0</y>
-      <width>451</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border :2px solid white;
-border-radius: 10px ;</string>
-    </property>
-    <property name="placeholderText">
-     <string>Ведіть назву </string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="texp">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>451</width>
-      <height>481</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border :2px solid white;
-border-radius: 10px ;</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="create_btn">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>250</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border :2px solid white;</string>
-    </property>
-    <property name="text">
-     <string>Створіти замітку</string>
-    </property>
-   </widget>
-   <widget class="QListView" name="listteg">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>340</y>
-      <width>251</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border :2px solid white;
-border-radius: 10px ;</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="save_btn">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>290</y>
-      <width>231</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border :2px solid white;
-background:qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.33 rgba(0, 0, 0, 255), stop:0.34 rgba(255, 30, 30, 255), stop:0.66 rgba(255, 0, 0, 255), stop:0.67 rgba(255, 255, 0, 255), stop:1 rgba(255, 255, 0, 255))</string>
-    </property>
-    <property name="text">
-     <string>Зберешти замітку</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="deletezam_btn">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>250</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border :2px solid white;</string>
-    </property>
-    <property name="text">
-     <string>Видалити замітку</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="gbereggam_btn">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>470</y>
-      <width>93</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border :2px solid white;</string>
-    </property>
-    <property name="text">
-     <string>Знайти тег</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="deleteteg_btn">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>500</y>
-      <width>97</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border :2px solid white;</string>
-    </property>
-    <property name="text">
-     <string>Видалити тег</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="cteateteg_btn">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>500</y>
-      <width>171</width>
+      <width>271</width>
       <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border :2px solid white;</string>
+     <string notr="true">text-align: center;</string>
     </property>
     <property name="text">
-     <string>Створити тег</string>
+     <string>                                    LIST NOTES</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="poisteg">
+   <widget class="QTextEdit" name="text">
     <property name="geometry">
      <rect>
-      <x>482</x>
-      <y>470</y>
-      <width>171</width>
-      <height>20</height>
+      <x>10</x>
+      <y>0</y>
+      <width>381</width>
+      <height>551</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border :2px solid white;
-border-radius: 10px ;</string>
+     <string notr="true">border:2px solid white;</string>
     </property>
     <property name="placeholderText">
-     <string>Ведіть назву тегу</string>
+     <string>text</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="zamitka">
+   <widget class="QListWidget" name="notes">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>40</y>
-      <width>256</width>
-      <height>192</height>
+      <x>410</x>
+      <y>30</y>
+      <width>271</width>
+      <height>171</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border :2px solid white;
-border-radius: 10px ;</string>
+     <string notr="true">border:2px solid white;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="create_notes">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>220</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid white;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>CREATE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delete_notes">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>220</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid white;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>DELETE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="save_note">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>220</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid white;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>SAVE</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="list_tegs">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>260</y>
+      <width>271</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>                                    LIST TEGS</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="search_tags">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>479</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>search tegs...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="creat_tags">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>520</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid white;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>CREATE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="save_tegs">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>520</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid white;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>SAVE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delete_tag">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>520</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid white;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>DELETE</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="tegs">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>290</y>
+      <width>271</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid white;</string>
     </property>
    </widget>
   </widget>
@@ -198,7 +210,7 @@ border-radius: 10px ;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>771</width>
+     <width>697</width>
      <height>21</height>
     </rect>
    </property>

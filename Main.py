@@ -1,6 +1,6 @@
-import json 
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtWidgets import QMainWindow
+import json
+from PyQt5.QtWidgets import QApplication, QMessageBox
+from PyQt5.QtWidgets import QMainWindow, QInputDialog
 from ui import Ui_MainWindow
 
 class Widget(QMainWindow):
@@ -8,74 +8,74 @@ class Widget(QMainWindow):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.read_hotes()
-        self.ui.listWidget.addItems(self.notes)
-        self.ui.listWidget.itemClicked.connect(self.show_note)
-        self.ui.save_btn.clicked.connect(self.save_notes)
-        self.ui.deletezam_btn.clicked.connect(self.delete_note)
-        self.ui.create_btn.clicked.connect(self.create_hotes)
+        self.read_notes()
+        self.ui.notes.addItems(self.notes)
+        self.ui.notes.itemClicked.connect(self.show_note)
+        self.ui.save_note.clicked.connect(self.Savednote)
+        self.ui.create_notes.clicked.connect(self.creatednote)
+#        self.ui.delete_notes.clicked.connect(self.)
+        self.ui.delete_notes.clicked.connect(self.deletenote)
+        self.ui.search_tag.clicked.connect(self.search_tag)
 
+    def show_note(self):
+        self.name = self.ui.notes.selectedItems()[0].text()
+        self.ui.text.setText(self.notes[self.name]["Текст"])
 
-    def show_note( self):
-        self.name = self.ui.listWidget.selectedItems()[0].text()
-        self.ui.title.setText(self.name)
-        self.ui.texp.setText(self.notes[self.name]["текст"])
-
-
-    def save_notes(self):
-        self.notes[self.ui.title.text()] = {
-            "текст": self.ui.texp.toPlainText(),
-            "теги" : []
-        }
-        with open("notes.json","w", encoding="utf-8") as file:
-            json.dump(self.notes , file)
+    def Savednote(self):
+        self.notes[self.name] = {
+                "Текст": self.ui.text.toPlainText(),
+                "теги": []
+            }
+        with open("note.json", "w", encoding = "utf-8") as file:
+            json.dump(self.notes, file)
+        self.ui.notes.clear()
+        self.ui.notes.addItems(self.notes)
         
-        self.ui.zamitka.clear()
-        self.ui.zamitka.addItems(self.notes)
 
+    def clearnote(self):
+        self.ui.text.clear()
 
+    def creatednote(self):
+        self.clearnote()
+        note_name, ok = QInputDialog.getText(notes_win, "Додати замітку", "Назва замітки: ")
+        if ok and note_name != "":
+            self.name = note_name
 
-    def clear(self):
-        self.ui.title.clear()
-        self.ui.texp.clear()
-
-
-    def create_hotes(self):
-        self.clear()
-
-
-    def read_hotes(self):
+    def read_notes(self):
         try:
-            with open("notes.json" , "r" , encoding="utf-8") as file:
+            with open("note.json", "r", encoding="utf-8") as file:
                 self.notes = json.load(file)
         except:
             self.notes = {
-            "Перша замітка":{
-                "текст":"Це текст першої замітки",
-                "теги": []
-            }
-        }
+                    "Перша замітка":{
+                        "Текст": "Це текст",
+                        "теги": []
+                    }
+                }
 
-
-
-
-        
-    def delete_note(self):
+    def deletenote(self):
         try:
             del self.notes[self.name]
-            self.clear()
-            self.ui.zamitka.clear()
-            self.ui.zamitka.addItems(self.notes)
-            self.save_notes()
+            self.clearnote()
+            self.ui.notes.clear()
+            self.ui.notes.addItems(self.notes)
+            self.Savednote()
         except:
-            print("помилка видалення")
+            print("Помилка видалення")
+        
+    def search_tag(self):
+        tag = self.ui.search_tag.text()
+        if tag:
+            matching_notes = []
+            for note_name in self.notes:
+                if tag in self.notes[note_name]["Tegs"]:
+                    matching_notes.append(note_name)
+        self.ui.notes.clear()
+        self.ui.notes.addItems(matching_notes)
 
 
 
-
-
-
-
+            
 
 
 
